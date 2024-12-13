@@ -15,7 +15,7 @@ mongoose.connect(MONGO_URL);
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: "http://localhost:8002"
+    origin: true
 }));
 
 app.use("/api", todoRoutes);
